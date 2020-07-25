@@ -1,0 +1,26 @@
+version: "2"
+services:
+   landoop:
+      container_name: landoop
+      image: landoop/fast-data-dev
+      ports:
+         - "9092:9092"
+         - "2181:2181"
+         - "8081:8081"
+         - "3030:3030"
+         - "9581-9585:9581-9585"
+         - "8082:8082"
+         - "8083:8083"
+      environment:
+         - ADV_HOST=127.0.0.1
+         - RUNTESTS=0
+         - MAX_BYTES=50000000
+   portainer:
+      container_name: portainer
+      image: portainer/portainer:latest
+      restart: always
+      ports:
+         - "9000:9000"
+      command: --admin-password '$$2y$$05$$W3R2dlwoQHZlwRxgdwjZp.IBid5M1NgQv0wwHRmLk/pbu4o2xnTMm'
+      volumes:
+         - "/var/run/docker.sock:/var/run/docker.sock"
