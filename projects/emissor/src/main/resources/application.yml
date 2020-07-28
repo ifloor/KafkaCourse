@@ -1,12 +1,12 @@
 
 server:
-  port: 5050
+  port: 5051
 
 spring:
   kafka:
     consumer:
       auto-offset-reset: earliest
-      group-id: vendedor
+      group-id: emissor
       bootstrap-servers: localhost:9092
     listener:
       missing-topics-fatal: false
