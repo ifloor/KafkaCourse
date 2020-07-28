@@ -1,6 +1,5 @@
 package br.com.monitoratec.vendedor.kafka.config;
 
-import br.com.monitoratec.vendedor.kafka.avro.generated.Selling;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -11,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
+import kafka.avro.generated.Selling;
 
 import javax.annotation.PostConstruct;
 import java.util.HashMap;
@@ -42,7 +42,7 @@ public class KafkaProducer {
 
     @Bean
     public KafkaTemplate<String, Selling> getLowFareResultKafkaTemplate() {
-        KafkaTemplate<String, Selling> kafkaTemplate = new KafkaTemplate<>(new DefaultKafkaProducerFactory<>(this.producerConfigs));
+        KafkaTemplate<String, kafka.avro.generated.Selling> kafkaTemplate = new KafkaTemplate<>(new DefaultKafkaProducerFactory<>(this.producerConfigs));
         kafkaTemplate.setDefaultTopic("br.com.monitoratec.selling");
         return kafkaTemplate;
     }

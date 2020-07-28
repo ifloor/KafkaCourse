@@ -1,11 +1,11 @@
 package br.com.monitoratec.vendedor.seller;
 
-import br.com.monitoratec.vendedor.kafka.avro.generated.Selling;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
+import kafka.avro.generated.Selling;
 
 import java.util.Scanner;
 import java.util.concurrent.ExecutionException;

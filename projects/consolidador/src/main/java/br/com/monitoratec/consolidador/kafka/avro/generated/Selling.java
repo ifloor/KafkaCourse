@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package br.com.monitoratec.vendedor.kafka.avro.generated;
+package kafka.avro.generated;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Selling extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 3520896443950152949L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Selling\",\"namespace\":\"br.com.monitoratec.vendedor.kafka.avro.generated\",\"fields\":[{\"name\":\"amount\",\"type\":\"double\"},{\"name\":\"buyer\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
+  private static final long serialVersionUID = 4232837496077116463L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Selling\",\"namespace\":\"kafka.avro.generated\",\"fields\":[{\"name\":\"amount\",\"type\":\"double\"},{\"name\":\"buyer\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -150,8 +150,8 @@ public class Selling extends org.apache.avro.specific.SpecificRecordBase impleme
    * Creates a new Selling RecordBuilder.
    * @return A new Selling RecordBuilder
    */
-  public static br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder newBuilder() {
-    return new br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder();
+  public static kafka.avro.generated.Selling.Builder newBuilder() {
+    return new kafka.avro.generated.Selling.Builder();
   }
 
   /**
@@ -159,11 +159,11 @@ public class Selling extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing builder to copy.
    * @return A new Selling RecordBuilder
    */
-  public static br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder newBuilder(br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder other) {
+  public static kafka.avro.generated.Selling.Builder newBuilder(kafka.avro.generated.Selling.Builder other) {
     if (other == null) {
-      return new br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder();
+      return new kafka.avro.generated.Selling.Builder();
     } else {
-      return new br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder(other);
+      return new kafka.avro.generated.Selling.Builder(other);
     }
   }
 
@@ -172,11 +172,11 @@ public class Selling extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing instance to copy.
    * @return A new Selling RecordBuilder
    */
-  public static br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder newBuilder(br.com.monitoratec.vendedor.kafka.avro.generated.Selling other) {
+  public static kafka.avro.generated.Selling.Builder newBuilder(kafka.avro.generated.Selling other) {
     if (other == null) {
-      return new br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder();
+      return new kafka.avro.generated.Selling.Builder();
     } else {
-      return new br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder(other);
+      return new kafka.avro.generated.Selling.Builder(other);
     }
   }
 
@@ -199,7 +199,7 @@ public class Selling extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder other) {
+    private Builder(kafka.avro.generated.Selling.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.amount)) {
         this.amount = data().deepCopy(fields()[0].schema(), other.amount);
@@ -215,7 +215,7 @@ public class Selling extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Selling instance
      * @param other The existing instance to copy.
      */
-    private Builder(br.com.monitoratec.vendedor.kafka.avro.generated.Selling other) {
+    private Builder(kafka.avro.generated.Selling other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.amount)) {
         this.amount = data().deepCopy(fields()[0].schema(), other.amount);
@@ -241,7 +241,7 @@ public class Selling extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'amount'.
       * @return This builder.
       */
-    public br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder setAmount(double value) {
+    public kafka.avro.generated.Selling.Builder setAmount(double value) {
       validate(fields()[0], value);
       this.amount = value;
       fieldSetFlags()[0] = true;
@@ -261,7 +261,7 @@ public class Selling extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'amount' field.
       * @return This builder.
       */
-    public br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder clearAmount() {
+    public kafka.avro.generated.Selling.Builder clearAmount() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -280,7 +280,7 @@ public class Selling extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'buyer'.
       * @return This builder.
       */
-    public br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder setBuyer(java.lang.String value) {
+    public kafka.avro.generated.Selling.Builder setBuyer(java.lang.String value) {
       validate(fields()[1], value);
       this.buyer = value;
       fieldSetFlags()[1] = true;
@@ -300,7 +300,7 @@ public class Selling extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'buyer' field.
       * @return This builder.
       */
-    public br.com.monitoratec.vendedor.kafka.avro.generated.Selling.Builder clearBuyer() {
+    public kafka.avro.generated.Selling.Builder clearBuyer() {
       buyer = null;
       fieldSetFlags()[1] = false;
       return this;

@@ -1,7 +1,7 @@
 {
 	"type": "record",
 	"name": "Selling",
-	"namespace": "br.com.monitoratec.vendedor.kafka.avro.generated",
+	"namespace": "kafka.avro.generated",
 	"fields": [
 		{
 			"name": "amount",

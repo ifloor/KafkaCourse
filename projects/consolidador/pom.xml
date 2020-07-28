@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>br.com.monitoratec</groupId>
-    <artifactId>emissor</artifactId>
+    <artifactId>consolidador</artifactId>
     <version>0.0.1</version>
-    <name>emissor</name>
-    <description>emissor of sellings</description>
+    <name>consolidador</name>
+    <description>Consolidador of sellings</description>
 
     <properties>
         <java.version>12</java.version>
@@ -87,7 +87,7 @@
                         </goals>
                         <configuration>
                             <sourceDirectory>${project.basedir}/src/main/resources/avro-sources/</sourceDirectory>
-                            <outputDirectory>${project.basedir}/src/main/java/br/com/monitoratec/emissor/</outputDirectory>
+                            <outputDirectory>${project.basedir}/src/main/java/br/com/monitoratec/consolidador</outputDirectory>
                             <stringType>String</stringType>
 
                         </configuration>

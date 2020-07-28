@@ -1,4 +1,4 @@
-package br.com.monitoratec.emissor.emissor.kafka.config;
+package br.com.monitoratec.emissor.kafka.config;
 
 import io.confluent.kafka.schemaregistry.client.SchemaRegistryClient;
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;

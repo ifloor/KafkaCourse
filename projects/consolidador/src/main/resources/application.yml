@@ -1,0 +1,17 @@
+
+server:
+  port: 5051
+
+spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      group-id: consolidador
+      bootstrap-servers: localhost:9092
+    listener:
+      missing-topics-fatal: false
+    producer:
+      bootstrap-servers: localhost:9092
+
+kafka:
+  schema-registry-server: http://localhost:8081
