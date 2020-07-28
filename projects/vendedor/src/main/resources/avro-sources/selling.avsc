@@ -1,0 +1,15 @@
+{
+	"type": "record",
+	"name": "Selling",
+	"namespace": "br.com.monitoratec.vendedor.kafka.avro.generated",
+	"fields": [
+		{
+			"name": "amount",
+			"type": "double"
+		},
+		{
+			"name": "buyer",
+			"type": "string"
+		}
+	]
+}

@@ -1,7 +1,7 @@
 version: "2"
 services:
    landoop:
-      container_name: landoop
+      container_name: landoop-course
       image: landoop/fast-data-dev
       ports:
          - "9092:9092"
@@ -16,7 +16,7 @@ services:
          - RUNTESTS=0
          - MAX_BYTES=50000000
    portainer:
-      container_name: portainer
+      container_name: portainer-course
       image: portainer/portainer:latest
       restart: always
       ports:
