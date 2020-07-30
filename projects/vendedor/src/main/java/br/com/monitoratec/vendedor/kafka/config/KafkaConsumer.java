@@ -55,7 +55,7 @@ public class KafkaConsumer {
     public ConcurrentKafkaListenerContainerFactory<String, Object> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, Object> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
-        factory.setMissingTopicsFatal(false);
+        factory.setMissingTopicsFatal(true);
         return factory;
     }
 }

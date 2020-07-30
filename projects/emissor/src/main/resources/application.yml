@@ -9,7 +9,7 @@ spring:
       group-id: emissor
       bootstrap-servers: localhost:9092
     listener:
-      missing-topics-fatal: false
+      missing-topics-fatal: true
     producer:
       bootstrap-servers: localhost:9092
 
