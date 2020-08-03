@@ -1,4 +1,4 @@
-package com.useargo.vendedor;
+package br.com.monitoratec.vendedor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

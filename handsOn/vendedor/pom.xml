@@ -8,11 +8,11 @@
         <version>2.3.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.useargo</groupId>
+    <groupId>br.com.monitoratec</groupId>
     <artifactId>vendedor</artifactId>
     <version>0.0.1</version>
     <name>vendedor</name>
-    <description>Vendedor-app</description>
+    <description>Vendedor app</description>
 
     <properties>
         <java.version>11</java.version>
