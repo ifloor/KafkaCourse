@@ -20,7 +20,7 @@ services:
       image: portainer/portainer:latest
       restart: always
       ports:
-         - "9000:9000"
+         - "9001:9000"
       command: --admin-password '$$2y$$05$$W3R2dlwoQHZlwRxgdwjZp.IBid5M1NgQv0wwHRmLk/pbu4o2xnTMm'
       volumes:
          - "/var/run/docker.sock:/var/run/docker.sock"
