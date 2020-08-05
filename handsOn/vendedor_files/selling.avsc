@@ -1,0 +1,15 @@
+{
+	"type": "record",
+	"name": "Selling",
+	"namespace": "kafka.avro.generated",
+	"fields": [
+		{
+			"name": "amount",
+			"type": "double"
+		},
+		{
+			"name": "buyer",
+			"type": "string"
+		}
+	]
+}
