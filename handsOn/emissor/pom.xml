@@ -12,16 +12,42 @@
     <artifactId>emissor</artifactId>
     <version>0.0.1</version>
     <name>emissor</name>
-    <description>Emissor app</description>
+    <description>emissor of sellings</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>12</java.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <url>http://packages.confluent.io/maven/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+            <version>1.9.2</version>
         </dependency>
 
         <dependency>
@@ -35,6 +61,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -42,6 +73,30 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro-maven-plugin</artifactId>
+                <version>1.9.2</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>schema</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/resources/avro-sources/</sourceDirectory>
+                            <outputDirectory>${project.basedir}/src/main/java/br/com/monitoratec/emissor/</outputDirectory>
+                            <stringType>String</stringType>
+
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <imports>
+                    </imports>
+                </configuration>
             </plugin>
         </plugins>
     </build>
