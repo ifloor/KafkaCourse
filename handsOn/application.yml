@@ -15,3 +15,4 @@ spring:
 
 kafka:
   schema-registry-server: http://localhost:8081
+
